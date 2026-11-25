@@ -111,3 +111,14 @@ function init(){
 }
 if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else init();
 })();
+
+/* 하루의 몰래 4컷: 화면에 들어오면 한 컷씩 */
+var Comic={init:function(){var red=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  [].forEach.call(document.querySelectorAll('.comic'),function(c){var ps=[].slice.call(c.querySelectorAll('.cp')),t=[];
+    function play(){t.forEach(clearTimeout);t=[];ps.forEach(function(p){p.classList.remove('on');});
+      if(red){ps.forEach(function(p){p.classList.add('on');});return;}
+      ps.forEach(function(p,i){t.push(setTimeout(function(){p.classList.add('on');},300+i*1400));});}
+    var b=c.querySelector('.creplay');if(b)b.onclick=play;
+    if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){play();io.disconnect();}});},{threshold:.25});io.observe(c);}else play();});}};
+window.Comic=Comic;
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',Comic.init);else Comic.init();

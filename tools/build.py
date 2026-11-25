@@ -204,6 +204,11 @@ STARS = {1: '입문 ●○○', 2: '보통 ●●○', 3: '도전 ●●●'}
 DEEP = set()
 NICK = {}
 GROUPS = ('픽셀조', '바람조')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'content'))
+try:
+    from easy import EASY
+except ImportError:
+    EASY = {}
 
 
 def chapter(ch, prevc, nextc):
@@ -213,7 +218,7 @@ def chapter(ch, prevc, nextc):
     stg = ch['stages']
     navl = ''.join('<a href="#lv%d">%d단계%s</a>' % (i, i, '·심화' if (ch['no'], i) in DEEP else '') for i in range(1, len(stg) + 1))
     o = [head('%02d %s — %s' % (n, ch['title'], SERIES), ch['q'], og='img/og/og_%02d.webp' % n)]
-    o.append(f'<nav class="top" aria-label="이 페이지 목차"><a class="logo" href="index.html">이산위상 연구실</a><a href="#three">3줄 요약</a><a href="#class">수업</a><a href="#map">큰 그림</a>{navl}<a href="#ai">AI 판단</a><a href="#duel">대결</a><a href="#sum">정리</a><a href="#kg">색인</a><a href="#export">꾸러미</a></nav><div id="prog"></div>')
+    o.append(f'<nav class="top" aria-label="이 페이지 목차"><a class="logo" href="index.html">이산위상 연구실</a><a href="#easy">4컷·쉬운 길</a><a href="#three">3줄 요약</a><a href="#class">수업</a><a href="#map">큰 그림</a>{navl}<a href="#ai">AI 판단</a><a href="#duel">대결</a><a href="#sum">정리</a><a href="#kg">색인</a><a href="#export">꾸러미</a></nav><div id="prog"></div>')
     # 표지 (대체 표지)
     cc = ['doc', 'fly', 'robo', ch['star'][0]]
     cm = ['front', 'magnify', 'smile', ch['star'][1]]
@@ -222,7 +227,7 @@ def chapter(ch, prevc, nextc):
     # 히어로
     kp = ''.join('<div class="kpi %s"><b>%s</b><span>%s</span></div>' % (c, esc(v), rich(t)) for c, v, t in ch['kpis'])
     o.append(f'''<header class="hero"><div class="wrap">
-<div class="kicker">{esc(ch['pillar_name'])} · {n:02d}장 · 오늘의 수업: {esc(ch['format'][0])} · {'기본 과정' if n in BASIC else '심화 과정'} · 난이도 {STARS[LEVEL.get(n, 2)]} · 본편 약 {MINUTES.get(n, 25)}분{' + 심화 단계 약 10분' if (n, 3) in DEEP else ''}</div>
+<div class="kicker">{esc(ch['pillar_name'])} · {n:02d}장 · 오늘의 수업: {esc(ch['format'][0])} · {'기본 과정' if n in BASIC else '심화 과정'} · 난이도 {STARS[LEVEL.get(n, 2)]} · 쉬운 길 약 5분 · 본편 약 {MINUTES.get(n, 25)}분{' + 심화 단계 약 10분' if (n, 3) in DEEP else ''}</div>
 <h1>{esc(ch['title'])}</h1>
 <p class="q">핵심 질문 — {esc(ch['q'])}</p>
 <p>{rich(ch['intro'])}</p>
@@ -237,16 +242,18 @@ def chapter(ch, prevc, nextc):
 <p class="note">행렬·벡터, 복잡한 공식을 몰라도 됩니다. 그림을 움직여 보고, 밑줄 친 말을 누르면 뜻이 나옵니다.</p>
 {('<details><summary>영어 기호·약어 풀이 (펼치기)</summary><ul>'+ab+'</ul></details>') if ab else ''}
 </div>{infog_html(ch)}</div>''')
+    # 쉬운 길: 하루의 몰래 4컷 + 쉬운 비유 + 쉬운 퀴즈 + 이론 구간 안내
+    o.append(easy_html(ch, nextc))
     # 등장인물
     castl = ''.join('<div>%s<div><span class="role">%s</span><b>%s</b><span>%s</span></div></div>' % (
         img(w, PEOPLE[w][2], cls=''), esc(PEOPLE[w][1]), esc(PEOPLE[w][0]), esc(ch.get('castnote', {}).get(w, PEOPLE[w][3]))) for w in
         ['doc', 'fly', 'robo', 'sia', 'moa', 'asst', 'x1', 'x2', 'x3'])
     prevlink = '<a href="%s">%s</a>' % (prevc[0], esc(prevc[1])) if prevc else '없음 (첫 장)'
-    o.append(f'''<section class="level" id="cast"><div class="wrap"><h2>등장인물 — 선생님 1명, 조교 2명, 수강생 6명</h2>
+    o.append(f'''<section class="level" id="cast"><div class="wrap"><details><summary><b>등장인물 — 선생님 1명, 조교 2명, 수강생 6명</b> (펼치기)</summary>
 <div class="cast">{castl}</div>
 {nick_html(n)}
 <p class="note">이 페이지 사용법: 밑줄 친 말을 누르면 뜻이 나옵니다(Esc로 닫기). 단계마다 그림을 직접 움직여 보고, 끝의 확인 퀴즈로 점검하세요. 앞 장: {prevlink}</p>
-</div></section>''')
+</details></div></section>''')
     # 수업 형식
     k = ch['klass']
     groups = ''
@@ -322,6 +329,8 @@ def chapter(ch, prevc, nextc):
     meta = page_meta(ch)
     quiz = {('q%d' % i): mix(s['quiz'], n * 10 + i) for i, s in enumerate(stg, 1)}
     quiz['ai'] = mix(a['quiz'], n * 10 + 9)
+    if EASY.get(n):
+        quiz['qe'] = mix([EASY[n]['quiz']], n * 10 + 7)
     o.append(jscript('page-data', {'quiz': quiz, 'duel': {'run': d['run'], 'lesson': d['lesson'], 'calc': d.get('calc')}}))
     o.append(jscript('kg-raw', kg))
     o.append(jscript('kg-ld', json_ld(kg, meta), 'application/ld+json'))
@@ -392,6 +401,41 @@ def nick_html(n):
     return '<h3>용어 별명 카드 — 어려운 이름은 별명으로 기억하세요</h3><div class="nick">%s</div>' % cards
 
 
+def theory_fold(title, inner):
+    faces = img('sia', 'e21', cls='pain') + img('moa', 'e24', cls='pain')
+    return ('<details class="theory"><summary><span class="tfaces">%s</span><span><b>이론 구간 — %s</b><br><span class="note">시아·모아도 머리를 감싼 곳이에요. 몰라도 그림 실험과 풀이를 따라올 수 있어요. 궁금하면 펼쳐 보세요.</span></span></summary>%s</details>' % (faces, esc(title), inner))
+
+
+def comic_html(n, c):
+    p1, p2, p3, p4 = c['panels']
+    cap4 = c.get('cap4', '박사는 멀리서 못 본 척 웃었다.')
+    def bub(who, t):
+        return '<p class="bub b-%s"><b>%s</b>%s</p>' % (who, esc(PEOPLE[who][0].split(' ')[-1]), rich(t))
+    panels = [
+        ('pain', img('sia', 'e24', cls='') + img('moa', 'e21', cls=''), bub('sia', p1[0]) + bub('moa', p1[1]), '<span class="sfx" aria-hidden="true">지끈지끈</span>' + esc(c.get('cap1', '이론 시간. 시아와 모아가 머리를 감싸 쥐었다.'))),
+        ('sneak', img('asst', 'e25', cls='') + img('sia', 'e05', cls='small') + img('moa', 'e05', cls='small'), bub('asst', p2), esc(c.get('cap2', '그때 하루가 박사 몰래 살금살금 다가왔다.'))),
+        ('teach', img('asst', 'e08', cls=''), bub('asst', p3), esc(c.get('cap3', '하루의 비밀 설명 시간.'))),
+        ('pop', img('sia', 'e19', cls='') + img('moa', 'e19', cls='') + img('asst', 'e16', cls='small'), bub('sia', p4[0]) + bub('moa', p4[1]), esc(cap4)),
+    ]
+    ps = ''.join('<div class="cp %s" data-step="%d"><span class="cno">%d</span><div class="cstage">%s</div><div class="cbubs">%s</div><p class="cc">%s</p></div>' % (k, i + 1, i + 1, im, bb, cc)
+                 for i, (k, im, bb, cc) in enumerate(panels))
+    return ('<figure class="comic" aria-label="하루의 몰래 4컷"><figcaption><b>하루의 몰래 4컷</b> — %s</figcaption><div class="cgrid">%s</div>'
+            '<button type="button" class="bt creplay">4컷 다시 보기</button></figure>' % (esc(c['title']), ps))
+
+
+def easy_html(ch, nextc):
+    n = ch['no']; e = EASY.get(n)
+    if not e:
+        return ''
+    gate = ('<div class="gate"><span class="tfaces">%s</span><div><b>여기까지가 「쉬운 길」이에요.</b> 아래부터는 단계별 설명과 그림 실험, 그리고 접혀 있는 이론 구간이에요. '
+            '시아·모아처럼 머리가 지끈거리면 <a href="%s">다음 장으로 바로 가도</a> 괜찮아요. 그림 실험만 해 봐도 충분해요.</div></div>') % (
+        img('sia', 'e20', cls='') + img('moa', 'e20', cls=''), nextc[0] if nextc else 'index.html')
+    return ('<section class="level" id="easy"><div class="wrap"><h2>쉬운 길 — 4컷과 비유로 먼저 (약 5분)</h2>%s'
+            '<div class="easybox"><div><h3>한 줄 핵심</h3><p class="one">%s</p></div><div><h3>쉬운 비유</h3>%s</div></div>'
+            '<div class="quiz" data-quiz="qe"></div>%s</div></section>') % (
+        comic_html(n, e['comic']), rich(e['one']), ''.join('<p>%s</p>' % rich(x) for x in e['analogy']), gate)
+
+
 def stage_html(ch, i, st):
     o = ['<section class="level" id="lv%d"><div class="wrap">' % i]
     tags = ''.join('<span class="tag %s">%s</span>' % (('fly' if t.startswith('일상') else 'nn'), esc(t)) for t in st['tags'])
@@ -400,24 +444,24 @@ def stage_html(ch, i, st):
     if st.get('recap'):
         o.append('<div class="recap"><b>30초 복습 — %s</b><br>%s</div>' % (esc(st['recap'][0]), rich(st['recap'][1])))
     w, f = st.get('why'), st.get('math')
-    if w or f:
-        o.append('<div class="twobox">')
-        if w:
-            o.append('<div class="whybox"><h3>왜 이 방법을 쓰나</h3><ol><li><b>문제 상황:</b> %s</li><li><b>앞 방법의 한계:</b> %s</li><li><b>해법:</b> %s</li></ol><div class="easy"><b>쉽게 말하면</b> — %s</div></div>' % (
-                rich(w[0]), rich(w[1]), rich(w[2]), rich(w[3])))
-        if f:
-            rows = ''.join('<tr><td>%s</td><td>%s</td><td>%s</td></tr>' % (rich(a), esc(b), rich(c)) for a, b, c in f['parts'])
-            tryit = ''.join('<p>%s</p>' % rich(x) for x in f['try'])
-            o.append('<div class="mathbox"><h3>수학 수식을 어려워하는 조수가 대신 물어봅니다</h3>%s<p><b>학교 수학으로 보면:</b> %s</p>'
-                     '<table class="sym"><thead><tr><th>식 조각</th><th>읽는 법</th><th>뜻</th></tr></thead><tbody>%s</tbody></table>'
-                     '<div class="tryit"><b>숫자로 한 번 해 보기</b>%s</div>%s</div>' % (
-                         say('asst', 'shock', f['q'], name='조수 하루 (수강생)'), rich(f['school']), rows, tryit,
-                         say('asst', 'spark', f['comment'], name='조수 하루 (수강생)')))
-        o.append('</div>')
+    if w:
+        o.append('<div class="whybox"><h3>왜 이 방법을 쓰나</h3><ol><li><b>문제 상황:</b> %s</li><li><b>앞 방법의 한계:</b> %s</li><li><b>해법:</b> %s</li></ol><div class="easy"><b>쉽게 말하면</b> — %s</div></div>' % (
+            rich(w[0]), rich(w[1]), rich(w[2]), rich(w[3])))
+    th = []
+    if f:
+        rows = ''.join('<tr><td>%s</td><td>%s</td><td>%s</td></tr>' % (rich(a), esc(b), rich(c)) for a, b, c in f['parts'])
+        tryit = ''.join('<p>%s</p>' % rich(x) for x in f['try'])
+        th.append('<div class="mathbox"><h3>수학 수식을 어려워하는 조수가 대신 물어봅니다</h3>%s<p><b>학교 수학으로 보면:</b> %s</p>'
+                  '<table class="sym"><thead><tr><th>식 조각</th><th>읽는 법</th><th>뜻</th></tr></thead><tbody>%s</tbody></table>'
+                  '<div class="tryit"><b>숫자로 한 번 해 보기</b>%s</div>%s</div>' % (
+                      say('asst', 'shock', f['q'], name='조수 하루 (수강생)'), rich(f['school']), rows, tryit,
+                      say('asst', 'spark', f['comment'], name='조수 하루 (수강생)')))
     if st.get('vec'):
         v = st['vec']
-        o.append('<div class="vecbox"><h3>벡터·행렬 첫걸음 — %s</h3>%s<div class="tryit">%s</div><p class="note">%s</p></div>' % (
+        th.append('<div class="vecbox"><h3>벡터·행렬 첫걸음 — %s</h3>%s<div class="tryit">%s</div><p class="note">%s</p></div>' % (
             esc(v['title']), ''.join('<p>%s</p>' % rich(x) for x in v['body']), ''.join('<p>%s</p>' % rich(x) for x in v['try']), rich(v.get('note', '행렬·벡터를 처음 본다면 이 상자는 건너뛰어도 본문을 따라올 수 있어요.'))))
+    if th:
+        o.append(theory_fold('수식으로 보기' + (' · 벡터·행렬 첫걸음' if st.get('vec') else ''), ''.join(th)))
     p = st['pair']
     scn = 'img/scene/scene_%02d_lv%d.webp' % (ch['no'], i)
     simg = ('<img class="scene" loading="lazy" src="%s" width="1200" height="800" alt="%s 장면 그림">' % (scn, esc(p[2] if len(p) > 2 else '일상 비유'))) if os.path.exists(os.path.join(ROOT, scn)) else ''
@@ -430,10 +474,15 @@ def stage_html(ch, i, st):
         ex, rich(st['limit']), rich(st['interp'])))
     if st.get('rest'):
         o.append('<div class="rest">%s</div>' % rich(st['rest']))
+    if st.get('code'):
+        rows = ''.join('<tr><td><code>%s</code></td><td>%s</td></tr>' % (esc(c), rich(m)) for c, m in st['code'])
+        nb = ch.get('notebook')
+        o.append('<details class="codebox"><summary><b>파이썬으로 보면</b> (몰라도 됩니다 — 코드 한 줄 + 뜻 한 줄)</summary><div class="tw"><table class="tb"><thead><tr><th>코드</th><th>뜻</th></tr></thead><tbody>%s</tbody></table></div>%s</details>' % (
+            rows, ('<p class="note">전체 코드와 실행 결과: <a href="%s">%s</a> (주피터 노트북, 그대로 실행돼요)</p>' % (nb, esc(nb.split('/')[-1]))) if nb else ''))
     if st.get('src'):
         s = st['src']
         fixes = ''.join('<div class="fix">%s</div>' % rich(x) for x in s.get('fix', []))
-        o.append('<details><summary>원자료 인포그래픽 보기 (영어 그림)</summary><p class="note">%s</p>%s<img loading="lazy" src="img/source/src%02d.webp" width="1280" height="714" alt="%s"></details>' % (
+        o.append('<details><summary>원자료 인포그래픽 보기 (영어 그림 · 이론 구간)</summary><p class="note">%s</p>%s<img loading="lazy" src="img/source/src%02d.webp" width="1280" height="714" alt="%s"></details>' % (
             rich(s['cap']), fixes, s['n'], esc(s['alt'])))
     if st.get('expert'):
         o.append('<details><summary>더 알고 싶은 분께 — 정확한 정의 (몰라도 됩니다)</summary>%s</details>' % rich(st['expert']))
@@ -467,7 +516,7 @@ def sprites_local():
 
 
 def main():
-    ws = ''.join(open(os.path.join(ROOT, 'assets', 'src', f), encoding='utf-8').read() + '\n' for f in ['w1.js', 'w2.js', 'w3.js', 'w4.js'])
+    ws = ''.join(open(os.path.join(ROOT, 'assets', 'src', f), encoding='utf-8').read() + '\n' for f in ['w1.js', 'w2.js', 'w3.js', 'w4.js', 'w5.js'])
     open(os.path.join(ROOT, 'assets', 'widgets.js'), 'w', encoding='utf-8').write(ws)
     pack = None
     if '--sprites' in sys.argv:

@@ -17,7 +17,7 @@ PEOPLE = {
 }
 
 # (콘텐츠 파일, 슬러그)
-CHAPTERS = [('ch%02d' % i, None) for i in range(1, 25)]
+CHAPTERS = [('ch%02d' % i, None) for i in range(1, 30)]
 
 _V = {'title': True, 'author': True, 'year': True, 'doi': False, 'pages': False}
 REFS = {
@@ -48,4 +48,18 @@ REFS = {
                     'role': 'background', 'verified': dict(_V), 'short': 'Mac Lane (1998) Categories for the Working Mathematician', 'use': '함자와 수반(짝) 관계'},
     'katok1992': {'type': 'book', 'title': 'Fuchsian Groups', 'author': [{'family': 'Katok', 'given': 'Svetlana'}], 'year': 1992, 'publisher': 'University of Chicago Press',
                   'role': 'background', 'verified': dict(_V), 'short': 'Katok (1992) Fuchsian Groups', 'use': '모듈러 군의 기본 영역과 쌍곡 넓이 π/3'},
+    'edelsbrunner2010': {'type': 'book', 'title': 'Computational Topology: An Introduction', 'author': [{'family': 'Edelsbrunner', 'given': 'Herbert'}, {'family': 'Harer', 'given': 'John'}], 'year': 2010, 'publisher': 'American Mathematical Society',
+                         'role': 'background', 'verified': dict(_V), 'short': 'Edelsbrunner & Harer (2010) Computational Topology', 'use': '지속 호몰로지, 오일러 수, 메시의 위상'},
+    'carlsson2009': {'type': 'article-journal', 'title': 'Topology and data', 'author': [{'family': 'Carlsson', 'given': 'Gunnar'}], 'year': 2009, 'container': 'Bulletin of the American Mathematical Society',
+                     'volume': '46', 'pages': '255-308', 'role': 'background', 'verified': dict(_V), 'short': 'Carlsson (2009) Topology and data', 'use': '위상 데이터 분석(TDA) 개관'},
+    'forman1998': {'type': 'article-journal', 'title': 'Morse theory for cell complexes', 'author': [{'family': 'Forman', 'given': 'Robin'}], 'year': 1998, 'container': 'Advances in Mathematics',
+                   'volume': '134', 'pages': '90-145', 'role': 'background', 'verified': dict(_V), 'short': 'Forman (1998) 이산 모스 이론', 'use': '이산 모스 이론'},
+    'bauer2021': {'type': 'article-journal', 'title': 'Ripser: efficient computation of Vietoris-Rips persistence barcodes', 'author': [{'family': 'Bauer', 'given': 'Ulrich'}], 'year': 2021, 'container': 'Journal of Applied and Computational Topology',
+                  'volume': '5', 'pages': '391-423', 'role': 'background', 'verified': dict(_V), 'short': 'Bauer (2021) Ripser', 'use': '노트북의 지속성 계산 도구'},
+    'desilva2007': {'type': 'article-journal', 'title': 'Coverage in sensor networks via persistent homology', 'author': [{'family': 'de Silva', 'given': 'Vin'}, {'family': 'Ghrist', 'given': 'Robert'}], 'year': 2007, 'container': 'Algebraic & Geometric Topology',
+                    'volume': '7', 'pages': '339-358', 'role': 'background', 'verified': dict(_V), 'short': 'de Silva & Ghrist (2007) 센서망 커버리지', 'use': '센서망 음영(구멍) 찾기'},
+    'botsch2010': {'type': 'book', 'title': 'Polygon Mesh Processing', 'author': [{'family': 'Botsch', 'given': 'Mario'}, {'family': 'Kobbelt', 'given': 'Leif'}, {'family': 'Pauly', 'given': 'Mark'}, {'family': 'Alliez', 'given': 'Pierre'}, {'family': 'Lévy', 'given': 'Bruno'}], 'year': 2010, 'publisher': 'A K Peters/CRC Press',
+                   'role': 'background', 'verified': dict(_V), 'short': 'Botsch 외 (2010) Polygon Mesh Processing', 'use': '3D 메시의 경계·구멍 판정'},
+    'kong1989': {'type': 'article-journal', 'title': 'Digital topology: introduction and survey', 'author': [{'family': 'Kong', 'given': 'T. Yung'}, {'family': 'Rosenfeld', 'given': 'Azriel'}], 'year': 1989, 'container': 'Computer Vision, Graphics, and Image Processing',
+                 'volume': '48', 'pages': '357-393', 'role': 'background', 'verified': dict(_V), 'short': 'Kong & Rosenfeld (1989) 디지털 위상 개관', 'use': '이미지 처리의 연결성·경계'},
 }

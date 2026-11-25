@@ -288,3 +288,45 @@ table.m01 td button:focus-visible{outline:2px solid var(--info)}
 .mat .cells{font-size:.95em}
 /* 받은 표지 그림이 제목 자리로 조금 넘어와도 글자가 읽히게 */
 @media (min-width:861px){.cover.has-img .ctext{background:rgba(255,255,255,.9);border-radius:12px;padding:14px 18px}}
+/* ── 쉬운 길: 하루의 몰래 4컷 ── */
+.comic{margin:8px 0 20px;border:0}
+.comic figcaption{font-size:17px;margin-bottom:10px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:700px){.cgrid{grid-template-columns:1fr}}
+.cp{position:relative;border:3px solid #16212b;border-radius:8px;background:#fff;padding:12px 12px 10px;min-height:250px;display:flex;flex-direction:column;opacity:.12;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.cp.on{opacity:1;transform:none}
+.cno{position:absolute;top:6px;left:8px;width:24px;height:24px;border-radius:50%;background:#16212b;color:#fff;font-size:13px;display:grid;place-items:center;font-weight:700}
+.cstage{display:flex;align-items:flex-end;justify-content:center;gap:4px;min-height:104px}
+.cstage img{width:96px;height:96px;image-rendering:auto}
+.cstage img.small{width:64px;height:64px;opacity:.85}
+.cbubs{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.bub{margin:0;background:#f6f8fa;border:2px solid #16212b;border-radius:14px;padding:6px 10px;font-size:15px;line-height:1.55;position:relative}
+.bub b{display:block;font-size:12px;color:var(--muted)}
+.bub.b-asst{background:#fdeef3;border-color:#c25b7a}
+.cc{margin:8px 0 0;font-size:13px;color:var(--muted);text-align:center}
+.sfx{display:block;font-weight:800;color:#c1302c;letter-spacing:2px;font-size:15px;margin-bottom:2px}
+.cp.on.pain .cstage img{animation:ache .35s ease-in-out 6}
+.cp.on.sneak .cstage img:first-child{animation:sneak .9s ease-out}
+.cp.on.pop .cstage img{animation:popin .6s ease-out}
+@keyframes ache{0%,100%{transform:rotate(0)}25%{transform:rotate(-4deg) translateX(-2px)}75%{transform:rotate(4deg) translateX(2px)}}
+@keyframes sneak{from{transform:translateX(70px);opacity:0}to{transform:none;opacity:1}}
+@keyframes popin{0%{transform:scale(.7)}70%{transform:scale(1.08)}100%{transform:scale(1)}}
+.creplay{margin-top:10px}
+@media (prefers-reduced-motion:reduce){.cp{opacity:1;transform:none;transition:none}.cp.on .cstage img{animation:none!important}}
+.easybox{display:grid;grid-template-columns:1fr 2fr;gap:14px;margin:6px 0 14px}
+.easybox>div{border:1px solid var(--rule);border-radius:12px;padding:14px 16px;background:#fff}
+.easybox h3{margin:0 0 6px;font-size:16px}
+.easybox .one{font-size:19px;font-weight:700;line-height:1.6;margin:0}
+@media (max-width:700px){.easybox{grid-template-columns:1fr}}
+.gate{display:flex;gap:12px;align-items:center;border:2px dashed #c1302c;border-radius:12px;padding:12px 14px;margin-top:16px;background:#fff8f7}
+.tfaces{display:inline-flex;flex:none}
+.tfaces img{width:56px;height:56px}
+.theory{border:2px solid #e3c9c6;border-radius:12px;margin:14px 0;background:#fffafa}
+.theory>summary{display:flex;gap:10px;align-items:center;padding:10px 12px;cursor:pointer;list-style:none}
+.theory>summary::-webkit-details-marker{display:none}
+.theory[open]>summary{border-bottom:1px solid #e3c9c6}
+.theory>div{margin:14px}
+.theory img.pain{animation:ache .35s ease-in-out 3}
+@media (prefers-reduced-motion:reduce){.theory img.pain{animation:none}}
+.codebox code{font-size:13px;white-space:pre-wrap;word-break:break-word}
+.codebox td:first-child{min-width:46%}
