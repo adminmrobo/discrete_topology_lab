@@ -1,50 +1,40 @@
-# 이산위상 연구실 (Discrete Topology Lab)
+# 이산위상 연구실 — 점 하나하나가 섬인 세상
 
-이산위상을 기초 공리부터 범주론의 보편 대상까지 따라가는 연구실 해설 시리즈입니다.
+중학생도 따라올 수 있게 만든 **이산 위상** 연구실 해설 시리즈예요. 인포그래픽 20장의 개념을 **24개의 짧은 장**(장마다 2단계, 15~20분)으로 잘게 나누고, 장마다 다른 수업 형식(1:1 토론, 찬반 토론, 조별 과제, 계산배틀, 발표수업, 역할극, 쪽지시험)으로 풀었어요. 행렬·벡터를 처음 배우는 분을 위해 「벡터·행렬 첫걸음」 상자 13곳을 넣었어요.
 
-글 · 안상선 ((주)M-Robo 대표)
+- 선생님: 박사 · 조교: 초파리 연구원, 주판봇 · 수강생: 인턴 시아, 인턴 모아, 조수 하루, 미공개 X1·X2·X3
+- 1조 「픽셀조」 시아·하루·X1 / 2조 「바람조」 모아·X2·X3 — 픽셀(이산) 위로 흐르는 바람길(연속)이라는 표지 콘셉트에서 온 이름
 
-## 구성 — 원본 장표 20장 (`slides/`)
+**바로 보기:** https://adminmrobo.github.io/discrete_topology_lab/ (GitHub Pages를 켜면 열려요)
 
-| 장 | 제목 | 묶음 |
-|---|---|---|
-| 01 | The Architecture of Discrete Topology | 개요 |
-| 02 | Foundations of Topological Spaces | 공간 분류 |
-| 03 | The Discrete Topology and Maximal Structural Distinction | 공간 분류 |
-| 04 | Compactness and Topological Finiteness | 공간 분류 |
-| 05 | Connectedness and Topological Separation | 공간 분류 |
-| 06 | Alexandroff Spaces and Poset Equivalence | 공간 분류 |
-| 07 | Digital Topology: The Khalimsky and Rosenfeld Models | 공간 분류 |
-| 08 | Semi-Topological and Pre-Topological Spaces | 공간 분류 |
-| 09 | Discrete Groups and Continuous Actions | 군 작용 |
-| 10 | The Hierarchy of Properly Discontinuous Actions | 군 작용 |
-| 11 | Fundamental Sets and Dirichlet Domains | 군 작용 |
-| 12 | Covering Spaces and Path Lifts | 군 작용 |
-| 13 | Universal Covers & The Topological Galois Correspondence | 보편 대상 |
-| 14 | The Stone-Čech Compactification (βX) | 보편 대상 |
-| 15 | Ultrafilters as Points at Infinity | 보편 대상 |
-| 16 | Extremally Disconnected Spaces | 보편 대상 |
-| 17 | Profinite Spaces and Groups | 보편 대상 |
-| 18 | Lattices and Discrete Subgroups of Lie Groups | 군 작용 |
-| 19 | The Categorical Architecture of Discrete Topology | 보편 대상 |
-| 20 | Conclusion: The Pervasive Utility of Discrete Constructs | 결론 |
+자매 시리즈: 같은 원자료로 만든 입문판 [위상수학 교실 (topology_ai_lab)](https://github.com/adminmrobo/topology_ai_lab) — 이 저장소는 장을 더 잘게 나누고 이산 위상과 행렬·벡터에 초점을 맞춘 심화·세분판이에요.
 
-## 해설로 옮길 때 고칠 점
+## 목차
 
-**내용 수정**
-- 19장: Disc 함자는 집합에 *이산위상*을 주는 함자다 (항등 사상만 있는 범주는 이산 범주). Hom_Set 화살표 방향, "topology topology" 중복도 고친다.
-- 06장: 열린집합은 각 점의 가장 작은 열린 근방들의 (임의) 합집합이다. 순서 집합과 대응하는 것은 T0 알렉산드로프 공간이고, 일반 알렉산드로프 공간은 준순서와 대응한다.
-- 05장: 아래 그림 두 개가 서로 바뀌어 있다.
-- 13장: 2행은 동형이 아니라 유비 관계다. "X̃~" 오타.
-- 04장: ℝⁿ 예시는 하이네-보렐(유계 닫힌집합)이라고 밝힌다. ℝⁿ 자체는 콤팩트가 아니다.
+| 기둥 | 장 |
+|---|---|
+| 1 · 점과 이웃 | 01 열린 집합 · 02 닫힌 집합과 경계 · 03 기저 · 04 이산 vs 밀착 · 05 위상을 0/1 표로 |
+| 2 · 공간의 성질 | 06 끊김과 연결 · 07 구멍 뚫린 평면의 길 · 08 콤팩트 · 09 떼어 놓기 · 10 가장 작은 이웃 · 11 순서 그림과 이웃 행렬 · 12 픽셀 역설 · 13 칼림스키 |
+| 3 · 움직임 | 14 군과 2×2 행렬 · 15 궤도·몫공간 · 16 얌전한 작용 · 17 대표 타일·디리클레 · 18 격자와 모듈러 군 · 19 덮개 공간 · 20 덱 변환·갈루아 대응 |
+| 4 · 끝과 보편 | 21 함자와 짝 · 22 울트라필터·스톤-체흐 · 23 아주 끊긴 공간·프로유한 |
+| 종합 | 24 기말 쪽지시험과 졸업 발표 · 마지막 장 실전 연습장(픽셀 지도사무소 · 바닥 타일 공장 · 나머지 시계탑) |
 
-**다듬기**
-- 02장 기저 조건: x ∈ B₁∩B₂이면 x ∈ B₃ ⊆ B₁∩B₂인 B₃가 있다.
-- 08장 반위상 정의의 출처 명시 (알렉산드로프 공간 정의와 겹침).
-- 10장 중복 문장, 끊긴 문장.
-- 14장 그림 라벨 "disconnects", 20장 그림 라벨 정리.
-- 17장: 사유한 군 내용 보강, 호환 조건은 π_ij(x_i) = x_j로 표기.
+## 구성
 
-## 표지
+- `index.html`, `NN_*.html`, `practice/index.html` — 페이지 (외부 라이브러리 없음, 글꼴만 외부 요청, 브라우저 저장소 사용 안 함)
+- `content/` — 장별 내용 데이터, `tools/build.py` — 조립 (`python3 tools/build.py`)
+- `assets/` — 공용 스타일·캐릭터·퀴즈·대결(`lab.css`, `lab.js`, `sprites.js`), 그림 실험(`src/w1~w4.js` → `widgets.js`), 실전 연습장(`practice.js`), 지식 색인·꾸러미(`js/kgx.js`)
+- `img/source/` — 원자료 인포그래픽 20장, `img/og/` — 공유 미리보기(임시), `img/cover/` — 표지(제작 예정)
+- `docs/IMG_specs.md` — 표지 26장 지시문(16비트 픽셀아트, 흰 배경), `cover/cover_prompt.md` — 시리즈 표지 콘셉트
+- `docs/WORK_NOTES.md` — 독자 진단, 원자료 바로잡기 22곳, 검산, 교수법 자가 채점(20/21)
+- `docs/PERSONA_REVIEW.md` — 페르소나 검사(행렬·벡터 처음 배우는 학생 중심)와 반영 내역
+- 검사 도구: `tools/check.py`(390·1280px 화면), `tools/test_duels.py`(조교 대결), `tools/test_practice.py`(실전 연습장 미션), `tools/make_og.py`, `tools/make_specs.py`
 
-`cover/cover_prompt.md` — 픽셀 열지도와 매끈한 유선으로 이산과 연속을 대비한 16비트 픽셀아트 표지 지시문.
+## 원자료와 다른 곳
+
+원자료 인포그래픽에서 바로잡은 곳은 각 단계의 「원자료 인포그래픽 보기」 상자와 `docs/WORK_NOTES.md`에 「원자료의 A를 이 페이지에서는 B로 바꿉니다」 형식으로 적었어요.
+
+---
+
+글 · 안상선 ([소개](https://adminmrobo.github.io/who_am_i/who_am_i.html)) · (주)M-Robo 대표
+캐릭터 그림은 연구실 캐릭터 팩(adminmrobo/fruitfly-lab-expressions)을 쓰며 허락 없이 다시 쓸 수 없습니다.
