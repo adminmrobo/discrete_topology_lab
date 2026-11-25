@@ -3,7 +3,7 @@
  "title_ko": "이산위상 연구실",
  "site_title": "이산위상 연구실 · 중학생도 따라오는 이산 위상 24장 + 실전 연습장",
  "site_url": "https://adminmrobo.github.io/discrete_topology_lab/",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "ontology": {
   "pages": [
    {
@@ -136,22 +136,20 @@
    "id": "cover_00",
    "role": "cover",
    "path": "index.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "file": "img/cover/cover_00.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_01",
    "role": "cover",
    "path": "01_open_sets.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -160,19 +158,17 @@
    ],
    "file": "img/cover/cover_01.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_02",
    "role": "cover",
    "path": "02_closed_sets_boundary.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -181,19 +177,17 @@
    ],
    "file": "img/cover/cover_02.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_03",
    "role": "cover",
    "path": "03_basis.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -202,19 +196,17 @@
    ],
    "file": "img/cover/cover_03.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_04",
    "role": "cover",
    "path": "04_discrete_vs_indiscrete.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -223,19 +215,17 @@
    ],
    "file": "img/cover/cover_04.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_05",
    "role": "cover",
    "path": "05_topology_as_table.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -244,19 +234,17 @@
    ],
    "file": "img/cover/cover_05.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_06",
    "role": "cover",
    "path": "06_connectedness.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -265,19 +253,17 @@
    ],
    "file": "img/cover/cover_06.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_07",
    "role": "cover",
    "path": "07_paths_in_punctured_plane.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -286,19 +272,17 @@
    ],
    "file": "img/cover/cover_07.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_08",
    "role": "cover",
    "path": "08_compactness.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -307,19 +291,17 @@
    ],
    "file": "img/cover/cover_08.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_09",
    "role": "cover",
    "path": "09_hausdorff_compact.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -328,19 +310,17 @@
    ],
    "file": "img/cover/cover_09.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_10",
    "role": "cover",
    "path": "10_smallest_neighborhoods.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -349,19 +329,17 @@
    ],
    "file": "img/cover/cover_10.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_11",
    "role": "cover",
    "path": "11_order_and_neighbor_matrix.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -370,19 +348,17 @@
    ],
    "file": "img/cover/cover_11.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_12",
    "role": "cover",
    "path": "12_pixel_paradox.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -391,19 +367,17 @@
    ],
    "file": "img/cover/cover_12.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_13",
    "role": "cover",
    "path": "13_khalimsky.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -412,19 +386,17 @@
    ],
    "file": "img/cover/cover_13.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_14",
    "role": "cover",
    "path": "14_groups_and_matrices.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -433,19 +405,17 @@
    ],
    "file": "img/cover/cover_14.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_15",
    "role": "cover",
    "path": "15_orbits_quotients.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -454,19 +424,17 @@
    ],
    "file": "img/cover/cover_15.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_16",
    "role": "cover",
    "path": "16_proper_actions.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -475,19 +443,17 @@
    ],
    "file": "img/cover/cover_16.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_17",
    "role": "cover",
    "path": "17_tiles_dirichlet.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -496,19 +462,17 @@
    ],
    "file": "img/cover/cover_17.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_18",
    "role": "cover",
    "path": "18_lattices_modular.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -517,19 +481,17 @@
    ],
    "file": "img/cover/cover_18.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_19",
    "role": "cover",
    "path": "19_covering_spaces.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -538,19 +500,17 @@
    ],
    "file": "img/cover/cover_19.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_20",
    "role": "cover",
    "path": "20_deck_galois.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -559,19 +519,17 @@
    ],
    "file": "img/cover/cover_20.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_21",
    "role": "cover",
    "path": "21_functors_adjunction.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -580,19 +538,17 @@
    ],
    "file": "img/cover/cover_21.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_22",
    "role": "cover",
    "path": "22_ultrafilters_stone_cech.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -601,19 +557,17 @@
    ],
    "file": "img/cover/cover_22.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_23",
    "role": "cover",
    "path": "23_extremal_profinite.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -622,19 +576,17 @@
    ],
    "file": "img/cover/cover_23.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_24",
    "role": "cover",
    "path": "24_final_review.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -643,28 +595,24 @@
    ],
    "file": "img/cover/cover_24.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   },
   {
    "id": "cover_practice",
    "role": "cover",
    "path": "practice/index.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "file": "img/cover/cover_practice.webp",
    "size": [
-    1920,
-    1080
+    2048,
+    1152
    ],
-   "grid": [
-    480,
-    270
-   ]
+   "grid": null,
+   "note": "Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)"
   }
  ]
 }

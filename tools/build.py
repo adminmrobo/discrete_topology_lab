@@ -368,8 +368,14 @@ def flow_html(ch, prevc, nextc):
 
 
 def cover_html(key, title, label, subt, alt, up='', chars=None):
-    if os.path.exists(os.path.join(ROOT, 'img', 'cover', key + '.webp')):
-        return (f'<div class="cover has-img" id="top"><img class="cimg" src="{up}img/cover/{key}.webp" width="1920" height="1080" alt="{esc(alt)}">'
+    fp = os.path.join(ROOT, 'img', 'cover', key + '.webp')
+    if os.path.exists(fp):
+        try:
+            from PIL import Image
+            cw, chh = Image.open(fp).size
+        except Exception:
+            cw, chh = 1920, 1080
+        return (f'<div class="cover has-img" id="top"><img class="cimg" src="{up}img/cover/{key}.webp" width="{cw}" height="{chh}" alt="{esc(alt)}">'
                 f'<div class="ctext"><span class="no">{esc(label)}</span><h1>{esc(title)}</h1><p>{esc(subt)}</p></div></div>')
     cc = ''.join(img(w, m, cls='') for w, m in (chars or [('doc', 'front'), ('fly', 'magnify'), ('robo', 'smile'), ('asst', 'smile')]))
     seed = sum(map(ord, key)) % 97 + 3

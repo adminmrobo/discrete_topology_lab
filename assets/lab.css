@@ -286,3 +286,5 @@ table.m01 td button:focus-visible{outline:2px solid var(--info)}
 }
 .mat{vertical-align:middle;margin:0 2px}
 .mat .cells{font-size:.95em}
+/* 받은 표지 그림이 제목 자리로 조금 넘어와도 글자가 읽히게 */
+@media (min-width:861px){.cover.has-img .ctext{background:rgba(255,255,255,.9);border-radius:12px;padding:14px 18px}}

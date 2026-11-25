@@ -1,6 +1,6 @@
 # 이산위상 연구실 — 그림 제작 명세서
 
-> 상태 (2026-11-25): **표지 그림 0/26 반영** — 지금은 페이지마다 픽셀 열지도 배경 + 캐릭터 팩 얼굴로 「대체 표지」를 보여 줘요. 공유 미리보기(img/og)는 `tools/make_og.py`가 만든 임시 그림이에요.
+> 상태 (2026-11-26): **표지 26/26 반영 완료** — 받은 그림은 2048×1152로, 정확한 픽셀 격자가 없는 그림이라 다시 줄이거나 압축하지 않고 받은 파일 그대로 썼어요. 공유 미리보기(img/og)는 `tools/make_og.py`가 표지를 왼쪽에 두고 오른쪽 빈 곳에 제목을 써서 만들어요. 아래 지시문은 다시 그릴 때 쓰는 원본이에요.
 
 ## 1. 공용 규칙
 
@@ -15,32 +15,32 @@
 
 | 키 | 페이지 | 상태 | 등장 |
 |---|---|---|---|
-| cover_00 | index.html | 대체 표지 사용 중 | 박사, 조수 하루, 시아, 모아 |
-| cover_01 | 01_open_sets.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
-| cover_02 | 02_closed_sets_boundary.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_03 | 03_basis.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
-| cover_04 | 04_discrete_vs_indiscrete.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_05 | 05_topology_as_table.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_06 | 06_connectedness.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
-| cover_07 | 07_paths_in_punctured_plane.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_08 | 08_compactness.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 주판봇 |
-| cover_09 | 09_hausdorff_compact.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_10 | 10_smallest_neighborhoods.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_11 | 11_order_and_neighbor_matrix.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
-| cover_12 | 12_pixel_paradox.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
-| cover_13 | 13_khalimsky.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_14 | 14_groups_and_matrices.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
-| cover_15 | 15_orbits_quotients.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_16 | 16_proper_actions.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 초파리 연구원 |
-| cover_17 | 17_tiles_dirichlet.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
-| cover_18 | 18_lattices_modular.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
-| cover_19 | 19_covering_spaces.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_20 | 20_deck_galois.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_21 | 21_functors_adjunction.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_22 | 22_ultrafilters_stone_cech.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_23 | 23_extremal_profinite.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_24 | 24_final_review.html | 대체 표지 사용 중 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_practice | practice/index.html | 대체 표지 사용 중 | 박사, 시아, 모아, X3 |
+| cover_00 | index.html | 반영 완료 | 박사, 조수 하루, 시아, 모아 |
+| cover_01 | 01_open_sets.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
+| cover_02 | 02_closed_sets_boundary.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_03 | 03_basis.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
+| cover_04 | 04_discrete_vs_indiscrete.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_05 | 05_topology_as_table.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_06 | 06_connectedness.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
+| cover_07 | 07_paths_in_punctured_plane.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_08 | 08_compactness.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 주판봇 |
+| cover_09 | 09_hausdorff_compact.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_10 | 10_smallest_neighborhoods.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_11 | 11_order_and_neighbor_matrix.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
+| cover_12 | 12_pixel_paradox.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
+| cover_13 | 13_khalimsky.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_14 | 14_groups_and_matrices.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
+| cover_15 | 15_orbits_quotients.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_16 | 16_proper_actions.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 초파리 연구원 |
+| cover_17 | 17_tiles_dirichlet.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
+| cover_18 | 18_lattices_modular.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
+| cover_19 | 19_covering_spaces.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_20 | 20_deck_galois.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_21 | 21_functors_adjunction.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_22 | 22_ultrafilters_stone_cech.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_23 | 23_extremal_profinite.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_24 | 24_final_review.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_practice | practice/index.html | 반영 완료 | 박사, 시아, 모아, X3 |
 
 ## 3. 표지 지시문
 

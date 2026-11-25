@@ -48,7 +48,7 @@ def prompt(scene, who):
 def main():
     chs = [load(i) for i in range(1, 25)]
     L = ['# 이산위상 연구실 — 그림 제작 명세서', '',
-         '> 상태 (2026-11-25): **표지 그림 0/26 반영** — 지금은 페이지마다 픽셀 열지도 배경 + 캐릭터 팩 얼굴로 「대체 표지」를 보여 줘요. 공유 미리보기(img/og)는 `tools/make_og.py`가 만든 임시 그림이에요.', '',
+         '> 상태 (2026-11-26): **표지 26/26 반영 완료** — 받은 그림은 2048×1152로, 정확한 픽셀 격자가 없는 그림이라 다시 줄이거나 압축하지 않고 받은 파일 그대로 썼어요. 공유 미리보기(img/og)는 `tools/make_og.py`가 표지를 왼쪽에 두고 오른쪽 빈 곳에 제목을 써서 만들어요. 아래 지시문은 다시 그릴 때 쓰는 원본이에요.', '',
          '## 1. 공용 규칙', '',
          '- 그림체: **16비트 RPG 픽셀아트**(연구실 표지 지침), **흰 배경(#ffffff)**. 그림 안에 글자·숫자·기호를 넣지 않는다(글자는 HTML로).',
          '- 시리즈 표지 콘셉트: 「픽셀 열지도(이산) 위로 매끈한 바람길(연속)」 — `cover/cover_prompt.md` 참고. 원작 만화·애니 캐릭터는 쓰지 않고 연구실 식구만 그린다.',
@@ -57,21 +57,21 @@ def main():
          '- 생성 순서: ① cover_00을 먼저 받아 그림체 확인 → ② 그 그림을 참고 그림으로 함께 올려 나머지 생성.',
          '- 반영: `img/cover/cover_NN.webp`를 넣고 `python3 tools/build.py`를 다시 돌리면 대체 표지가 그림으로 바뀌어요. og는 같은 그림을 1200×630으로 잘라 `img/og/og_NN.webp`로 덮어써요.', '',
          '## 2. 필요한 그림 전체', '', '| 키 | 페이지 | 상태 | 등장 |', '|---|---|---|---|']
-    L.append('| cover_00 | index.html | 대체 표지 사용 중 | 박사, 조수 하루, 시아, 모아 |')
+    L.append('| cover_00 | index.html | 반영 완료 | 박사, 조수 하루, 시아, 모아 |')
     for c in chs:
         who = ['doc', 'fly', 'robo', c['star'][0]]
-        L.append('| cover_%02d | %s.html | 대체 표지 사용 중 | %s |' % (c['no'], c['slug'], ', '.join(dict(doc='박사', fly='초파리 연구원', robo='주판봇', asst='조수 하루', sia='인턴 시아', moa='인턴 모아', x1='미공개 X1', x2='미공개 X2', x3='미공개 X3')[w] for w in who)))
-    L.append('| cover_practice | practice/index.html | 대체 표지 사용 중 | 박사, 시아, 모아, X3 |')
+        L.append('| cover_%02d | %s.html | 반영 완료 | %s |' % (c['no'], c['slug'], ', '.join(dict(doc='박사', fly='초파리 연구원', robo='주판봇', asst='조수 하루', sia='인턴 시아', moa='인턴 모아', x1='미공개 X1', x2='미공개 X2', x3='미공개 X3')[w] for w in who)))
+    L.append('| cover_practice | practice/index.html | 반영 완료 | 박사, 시아, 모아, X3 |')
     L += ['', '## 3. 표지 지시문', '', '### cover_00 — 오리엔테이션', '', '```', prompt(SCENE[0], ['doc', 'asst', 'sia', 'moa', 'fly', 'robo']), '```', '']
     for c in chs:
         L += ['### cover_%02d — %s' % (c['no'], c['title']), '', '비유: ' + ' / '.join(s['pair'][2] for s in c['stages']), '', '```', prompt(SCENE[c['no']], ['doc', 'fly', 'robo', c['star'][0]]), '```', '']
     L += ['### cover_practice — 실전 연습장', '', '```', prompt(SCENE['practice'], ['doc', 'sia', 'moa', 'x3']), '```', '']
     open(os.path.join(ROOT, 'docs', 'IMG_specs.md'), 'w', encoding='utf-8').write('\n'.join(L))
-    items = [{'id': 'cover_00', 'role': 'cover', 'path': 'index.html#top', 'status': 'placeholder', 'file': 'img/cover/cover_00.webp', 'size': [1920, 1080], 'grid': [480, 270]}]
-    items += [{'id': 'cover_%02d' % c['no'], 'role': 'cover', 'path': c['slug'] + '.html#top', 'status': 'placeholder', 'characters': ['doc', 'fly', 'jupanbot', c['star'][0]], 'file': 'img/cover/cover_%02d.webp' % c['no'], 'size': [1920, 1080], 'grid': [480, 270]} for c in chs]
-    items.append({'id': 'cover_practice', 'role': 'cover', 'path': 'practice/index.html#top', 'status': 'placeholder', 'file': 'img/cover/cover_practice.webp', 'size': [1920, 1080], 'grid': [480, 270]})
+    items = [{'id': 'cover_00', 'role': 'cover', 'path': 'index.html#top', 'status': 'ok', 'file': 'img/cover/cover_00.webp', 'size': [2048, 1152], 'grid': None, 'note': 'Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)'}]
+    items += [{'id': 'cover_%02d' % c['no'], 'role': 'cover', 'path': c['slug'] + '.html#top', 'status': 'ok', 'characters': ['doc', 'fly', 'jupanbot', c['star'][0]], 'file': 'img/cover/cover_%02d.webp' % c['no'], 'size': [2048, 1152], 'grid': None, 'note': 'Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)'} for c in chs]
+    items.append({'id': 'cover_practice', 'role': 'cover', 'path': 'practice/index.html#top', 'status': 'ok', 'file': 'img/cover/cover_practice.webp', 'size': [2048, 1152], 'grid': None, 'note': 'Genspark 생성 원본 그대로(픽셀 격자 없음, 재압축 안 함)'})
     man = {'series_ko': '이산위상 연구실 — 점 하나하나가 섬인 세상', 'title_ko': '이산위상 연구실', 'site_title': '이산위상 연구실 · 중학생도 따라오는 이산 위상 24장 + 실전 연습장',
-           'site_url': 'https://adminmrobo.github.io/discrete_topology_lab/', 'updated': '2026-11-25',
+           'site_url': 'https://adminmrobo.github.io/discrete_topology_lab/', 'updated': '2026-11-26',
            'ontology': {'pages': [{'path': c['slug'] + '.html', 'kg': True, 'export': True} for c in chs]}, 'languages': ['ko'], 'items': items}
     json.dump(man, open(os.path.join(ROOT, 'cover_manifest.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print('specs, manifest')

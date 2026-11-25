@@ -8,7 +8,33 @@ FONT = '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc'
 HEAT = [(30, 85, 200), (47, 143, 111), (19, 115, 58), (154, 163, 26), (216, 162, 26), (224, 122, 26)]
 
 
+def og_from_cover(key, ckey, title, label):
+    """표지가 있으면: 표지를 높이 630에 맞춰 왼쪽에 두고, 비워 둔 오른쪽에 제목을 쓴다."""
+    cp = os.path.join(ROOT, 'img', 'cover', ckey + '.webp')
+    if not os.path.exists(cp):
+        return False
+    c = Image.open(cp).convert('RGB'); w = round(c.width * 630 / c.height)
+    c = c.resize((w, 630), Image.LANCZOS)
+    big = Image.new('RGB', (1200, 630), 'white'); big.paste(c, (0, 0)); d = ImageDraw.Draw(big)
+    x0 = 640; d.rectangle([x0 - 16, 0, 1200, 630], fill='white')
+    f1 = ImageFont.truetype(FONT, 26); f2 = ImageFont.truetype(FONT, 46)
+    d.rectangle([x0, 90, x0 + d.textlength(label, font=f1) + 24, 134], fill=(22, 33, 43)); d.text((x0 + 12, 93), label, font=f1, fill='white')
+    lines, cur = [], ''
+    for wd in title.split(' '):
+        t = (cur + ' ' + wd).strip()
+        if d.textlength(t, font=f2) > 520 and cur: lines.append(cur); cur = wd
+        else: cur = t
+    lines.append(cur)
+    for i, l in enumerate(lines[:5]): d.text((x0, 160 + i * 64), l, font=f2, fill=(22, 33, 43))
+    d.text((x0, 560), '이산위상 연구실 · 글 안상선', font=f1, fill=(91, 104, 116))
+    big.save(os.path.join(ROOT, 'img', 'og', 'og_%s.webp' % key), quality=88)
+    return True
+
+
 def og(key, title, label):
+    ckey = {'index': 'cover_00', 'practice': 'cover_practice'}.get(key, 'cover_' + key)
+    if og_from_cover(key, ckey, title, label):
+        return
     W, H, px = 300, 158, 1  # 1/4 격자에서 그린 뒤 4배 NEAREST
     im = Image.new('RGB', (W, H), 'white'); d = ImageDraw.Draw(im)
     rnd = random.Random(sum(map(ord, key)))
