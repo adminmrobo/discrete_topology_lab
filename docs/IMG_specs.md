@@ -1,6 +1,6 @@
 # 이산위상 연구실 — 그림 제작 명세서
 
-> 상태 (2026-11-26): **표지 다시 그리기 대기** — 먼저 받은 표지 26장은 캐릭터가 원형을 잃어(초파리 흰색, 박사 회색 머리, 모아 갈색 머리, 주판봇 회색 로봇 등) `img/cover_offmodel/`로 옮겼어요. 지금은 캔버스 대체 표지(캐릭터 팩 스프라이트)가 보여요. 아래 지시문은 캐릭터 팩 정체성 문장과 기준 그림(lab6_lineup.png)을 바탕으로 고친 판이에요. 평가와 결정은 `docs/CHARACTER_REVIEW.md`.
+> 상태 (2026-11-26): **원형 지키기 판 표지 31/31 반영 완료** — 1920×1080, 480×270 픽셀 격자의 정확한 4배(검산: 4픽셀마다 같은 값)라 받은 파일을 그대로 썼어요. 처음 받은 원형 상실 판 26장은 `img/cover_offmodel/`에 보관. E27 표정은 시아만 반영, 모아는 다시 요청(아래 4장). 평가와 결정은 `docs/CHARACTER_REVIEW.md`.
 
 ## 1. 공용 규칙
 
@@ -15,37 +15,37 @@
 
 | 키 | 페이지 | 상태 | 등장 |
 |---|---|---|---|
-| cover_00 | index.html | 다시 그리기 | 박사, 조수 하루, 시아, 모아 |
-| cover_01 | 01_open_sets.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
-| cover_02 | 02_closed_sets_boundary.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_03 | 03_basis.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
-| cover_04 | 04_discrete_vs_indiscrete.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_05 | 05_topology_as_table.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_06 | 06_connectedness.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
-| cover_07 | 07_paths_in_punctured_plane.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_08 | 08_compactness.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 주판봇 |
-| cover_09 | 09_hausdorff_compact.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_10 | 10_smallest_neighborhoods.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_11 | 11_order_and_neighbor_matrix.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
-| cover_12 | 12_pixel_paradox.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
-| cover_13 | 13_khalimsky.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_14 | 14_groups_and_matrices.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
-| cover_15 | 15_orbits_quotients.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_16 | 16_proper_actions.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 초파리 연구원 |
-| cover_17 | 17_tiles_dirichlet.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
-| cover_18 | 18_lattices_modular.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
-| cover_19 | 19_covering_spaces.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_20 | 20_deck_galois.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_21 | 21_functors_adjunction.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_22 | 22_ultrafilters_stone_cech.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_23 | 23_extremal_profinite.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_24 | 24_final_review.html | 다시 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_25 | 25_why_discrete_data.html | 새로 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
-| cover_26 | 26_image_medical.html | 새로 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
-| cover_27 | 27_mesh_holes.html | 새로 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
-| cover_28 | 28_sensor_network.html | 새로 그리기 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
-| cover_29 | 29_tda_python.html | 새로 그리기 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
-| cover_practice | practice/index.html | 다시 그리기 | 박사, 시아, 모아, X3 |
+| cover_00 | index.html | 반영 완료 | 박사, 조수 하루, 시아, 모아 |
+| cover_01 | 01_open_sets.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
+| cover_02 | 02_closed_sets_boundary.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_03 | 03_basis.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
+| cover_04 | 04_discrete_vs_indiscrete.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_05 | 05_topology_as_table.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_06 | 06_connectedness.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
+| cover_07 | 07_paths_in_punctured_plane.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_08 | 08_compactness.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 주판봇 |
+| cover_09 | 09_hausdorff_compact.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_10 | 10_smallest_neighborhoods.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_11 | 11_order_and_neighbor_matrix.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
+| cover_12 | 12_pixel_paradox.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
+| cover_13 | 13_khalimsky.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_14 | 14_groups_and_matrices.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
+| cover_15 | 15_orbits_quotients.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_16 | 16_proper_actions.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 초파리 연구원 |
+| cover_17 | 17_tiles_dirichlet.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
+| cover_18 | 18_lattices_modular.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 조수 하루 |
+| cover_19 | 19_covering_spaces.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_20 | 20_deck_galois.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_21 | 21_functors_adjunction.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_22 | 22_ultrafilters_stone_cech.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_23 | 23_extremal_profinite.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_24 | 24_final_review.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_25 | 25_why_discrete_data.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X1 |
+| cover_26 | 26_image_medical.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 모아 |
+| cover_27 | 27_mesh_holes.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X3 |
+| cover_28 | 28_sensor_network.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 미공개 X2 |
+| cover_29 | 29_tda_python.html | 반영 완료 | 박사, 초파리 연구원, 주판봇, 인턴 시아 |
+| cover_practice | practice/index.html | 반영 완료 | 박사, 시아, 모아, X3 |
 
 ## 3. 표지 지시문
 
@@ -295,12 +295,12 @@ Use the attached reference lineup (lab6_lineup.png) and expression faces as the 
 
 ## 4. 표정 추가 요청 — E27 머리 감싸 쥐기 (시아 · 모아)
 
-이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. 받기 전까지는 E21·E24 표정에 흔들림 효과를 씌워 대신해요.
+이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. **시아는 반영 완료.** 모아는 받은 그림이 웃는 전신 그림(검은 배경, 손이 머리에 없음)이라 아래 고친 지시문으로 다시 요청해요. 받기 전까지 모아는 E21·E24 + 흔들림 효과.
 
 ```
 Use the attached character sheet as the ONLY design source and keep the character exactly on-model. Same 16-bit pixel-art style, same canvas size and framing as the attached expression faces, plain light grey background. New expression E27 "head_clutch": both hands pressed to the sides of the head, eyes squeezed into swirls, a small sweat drop, mouth in a wobbly line, as if a math formula is too hard. No letters, no symbols. Character: intern Sia (chibi maid intern, long straight jet-black hair to the waist, side-swept bangs, gray eyes, NO headdress, charcoal-black long-sleeved maid dress with white lace cuffs, large soft gray bow at the collar, long white frilled apron)
 ```
 
 ```
-Same request for: intern Moa (chibi maid intern, long ash-beige hair to the waist with wavy ends, white frilled maid headband, amber-brown eyes, camel knit cardigan over a white shirt with a red and navy plaid bow tie, white frilled apron, black skirt, brown loafers; NOT brown hair, NOT a big red bow)
+Use the attached Moa character sheet and the attached Sia E27 image as references. Draw Moa in EXACTLY the same pose, crop and framing as the attached Sia E27 (upper body, from the waist up, facing the viewer), same 16-bit pixel-art style, plain light grey background (NOT black). Expression E27 head_clutch: BOTH hands pressed against the sides of her head over the hair, eyes drawn as dizzy spirals, a small sweat drop, mouth a wavy worried line. She must NOT smile and must NOT be full body. Keep her design: intern Moa (chibi maid intern, long ash-beige hair to the waist with wavy ends, white frilled maid headband, amber-brown eyes, camel knit cardigan over a white shirt with a red and navy plaid bow tie, white frilled apron, black skirt, brown loafers; NOT brown hair, NOT a big red bow). No letters, no symbols.
 ```

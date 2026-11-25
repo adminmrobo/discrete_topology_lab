@@ -25,7 +25,7 @@
 - `index.html`, `NN_*.html`, `practice/index.html` — 페이지 (외부 라이브러리 없음, 글꼴만 외부 요청, 브라우저 저장소 사용 안 함)
 - `content/` — 장별 내용 데이터, `tools/build.py` — 조립 (`python3 tools/build.py`)
 - `assets/` — 공용 스타일·캐릭터·퀴즈·대결(`lab.css`, `lab.js`, `sprites.js`), 그림 실험(`src/w1~w5.js` → `widgets.js`), 실전 연습장(`practice.js`), 지식 색인·꾸러미(`js/kgx.js`)
-- `img/source/` — 원자료 인포그래픽 20장, `img/og/` — 공유 미리보기(임시), `img/cover/` — 표지(다시 그리기 대기), `img/cover_offmodel/` — 원형을 잃어 내린 표지
+- `img/source/` — 원자료 인포그래픽 20장, `img/og/` — 공유 미리보기(임시), `img/cover/` — 표지 31장(원형 지키기 판), `img/cover_offmodel/` — 원형을 잃어 내린 표지
 - `notebooks/` — 활용 편 실행 노트북 5개 (numpy, scipy, scikit-image, trimesh, networkx, ripser)
 - `docs/CHARACTER_REVIEW.md` — 표지 캐릭터 원형 평가와 결정
 - `docs/IMG_specs.md`, `docs/IMG_prompts_batches.md` — 표지 31장 지시문(원형 지키기 판, 16비트 픽셀아트, 흰 배경), `cover/cover_prompt.md` — 시리즈 표지 콘셉트

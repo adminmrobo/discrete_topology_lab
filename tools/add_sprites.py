@@ -49,4 +49,5 @@ def main(pack):
     open(p, 'w', encoding='utf-8').write(js)
 
 
-main(sys.argv[1])
+if __name__ == '__main__':
+    main(sys.argv[1])

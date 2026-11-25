@@ -402,7 +402,7 @@ def nick_html(n):
 
 
 def theory_fold(title, inner):
-    faces = img('sia', 'e21', cls='pain') + img('moa', 'e24', cls='pain')
+    faces = img('sia', 'e27', cls='pain') + img('moa', 'e24', cls='pain')
     return ('<details class="theory"><summary><span class="tfaces">%s</span><span><b>이론 구간 — %s</b><br><span class="note">시아·모아도 머리를 감싼 곳이에요. 몰라도 그림 실험과 풀이를 따라올 수 있어요. 궁금하면 펼쳐 보세요.</span></span></summary>%s</details>' % (faces, esc(title), inner))
 
 
@@ -412,7 +412,7 @@ def comic_html(n, c):
     def bub(who, t):
         return '<p class="bub b-%s"><b>%s</b>%s</p>' % (who, esc(PEOPLE[who][0].split(' ')[-1]), rich(t))
     panels = [
-        ('pain', img('sia', 'e24', cls='') + img('moa', 'e21', cls=''), bub('sia', p1[0]) + bub('moa', p1[1]), '<span class="sfx" aria-hidden="true">지끈지끈</span>' + esc(c.get('cap1', '이론 시간. 시아와 모아가 머리를 감싸 쥐었다.'))),
+        ('pain', img('sia', 'e27', cls='') + img('moa', 'e21', cls=''), bub('sia', p1[0]) + bub('moa', p1[1]), '<span class="sfx" aria-hidden="true">지끈지끈</span>' + esc(c.get('cap1', '이론 시간. 시아와 모아가 머리를 감싸 쥐었다.'))),
         ('sneak', img('asst', 'e25', cls='') + img('sia', 'e05', cls='small') + img('moa', 'e05', cls='small'), bub('asst', p2), esc(c.get('cap2', '그때 하루가 박사 몰래 살금살금 다가왔다.'))),
         ('teach', img('asst', 'e08', cls=''), bub('asst', p3), esc(c.get('cap3', '하루의 비밀 설명 시간.'))),
         ('pop', img('sia', 'e19', cls='') + img('moa', 'e19', cls='') + img('asst', 'e16', cls='small'), bub('sia', p4[0]) + bub('moa', p4[1]), esc(cap4)),

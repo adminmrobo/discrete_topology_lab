@@ -161,7 +161,7 @@
    "id": "cover_00",
    "role": "cover",
    "path": "index.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "file": "img/cover/cover_00.webp",
    "size": [
     1920,
@@ -172,13 +172,13 @@
     270
    ],
    "offmodel": "img/cover_offmodel/cover_00.webp",
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_01",
    "role": "cover",
    "path": "01_open_sets.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -194,13 +194,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_02",
    "role": "cover",
    "path": "02_closed_sets_boundary.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -216,13 +216,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_03",
    "role": "cover",
    "path": "03_basis.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -238,13 +238,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_04",
    "role": "cover",
    "path": "04_discrete_vs_indiscrete.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -260,13 +260,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_05",
    "role": "cover",
    "path": "05_topology_as_table.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -282,13 +282,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_06",
    "role": "cover",
    "path": "06_connectedness.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -304,13 +304,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_07",
    "role": "cover",
    "path": "07_paths_in_punctured_plane.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -326,13 +326,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_08",
    "role": "cover",
    "path": "08_compactness.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -348,13 +348,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_09",
    "role": "cover",
    "path": "09_hausdorff_compact.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -370,13 +370,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_10",
    "role": "cover",
    "path": "10_smallest_neighborhoods.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -392,13 +392,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_11",
    "role": "cover",
    "path": "11_order_and_neighbor_matrix.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -414,13 +414,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_12",
    "role": "cover",
    "path": "12_pixel_paradox.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -436,13 +436,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_13",
    "role": "cover",
    "path": "13_khalimsky.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -458,13 +458,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_14",
    "role": "cover",
    "path": "14_groups_and_matrices.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -480,13 +480,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_15",
    "role": "cover",
    "path": "15_orbits_quotients.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -502,13 +502,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_16",
    "role": "cover",
    "path": "16_proper_actions.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -524,13 +524,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_17",
    "role": "cover",
    "path": "17_tiles_dirichlet.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -546,13 +546,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_18",
    "role": "cover",
    "path": "18_lattices_modular.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -568,13 +568,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_19",
    "role": "cover",
    "path": "19_covering_spaces.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -590,13 +590,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_20",
    "role": "cover",
    "path": "20_deck_galois.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -612,13 +612,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_21",
    "role": "cover",
    "path": "21_functors_adjunction.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -634,13 +634,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_22",
    "role": "cover",
    "path": "22_ultrafilters_stone_cech.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -656,13 +656,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_23",
    "role": "cover",
    "path": "23_extremal_profinite.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -678,13 +678,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_24",
    "role": "cover",
    "path": "24_final_review.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -700,13 +700,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_25",
    "role": "cover",
    "path": "25_why_discrete_data.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -722,13 +722,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_26",
    "role": "cover",
    "path": "26_image_medical.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -744,13 +744,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_27",
    "role": "cover",
    "path": "27_mesh_holes.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -766,13 +766,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_28",
    "role": "cover",
    "path": "28_sensor_network.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -788,13 +788,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_29",
    "role": "cover",
    "path": "29_tda_python.html#top",
-   "status": "placeholder",
+   "status": "ok",
    "characters": [
     "doc",
     "fly",
@@ -810,13 +810,13 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   },
   {
    "id": "cover_practice",
    "role": "cover",
    "path": "practice/index.html#top",
-   "status": "regenerate",
+   "status": "ok",
    "file": "img/cover/cover_practice.webp",
    "size": [
     1920,
@@ -826,7 +826,7 @@
     480,
     270
    ],
-   "note": "원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성"
+   "note": "원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/"
   }
  ]
 }

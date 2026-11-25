@@ -73,4 +73,4 @@ if __name__ == '__main__':
         og('%02d' % i, m.CH['title'], '%02d장 · %s' % (i, m.CH['pillar_name']))
     og('index', '이산위상 연구실 — 점 하나하나가 섬인 세상', '오리엔테이션')
     og('practice', '이산위상 사업장 시뮬레이터', '마지막 장 · 실전 연습장')
-    print('og 26장')
+    print('og 31장')

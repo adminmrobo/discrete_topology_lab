@@ -60,7 +60,7 @@ def prompt(scene, who):
 def main():
     chs = [load(i) for i in range(1, 40) if os.path.exists(os.path.join(ROOT, 'content', 'ch%02d.py' % i))]
     L = ['# 이산위상 연구실 — 그림 제작 명세서', '',
-         '> 상태 (2026-11-26): **표지 다시 그리기 대기** — 먼저 받은 표지 26장은 캐릭터가 원형을 잃어(초파리 흰색, 박사 회색 머리, 모아 갈색 머리, 주판봇 회색 로봇 등) `img/cover_offmodel/`로 옮겼어요. 지금은 캔버스 대체 표지(캐릭터 팩 스프라이트)가 보여요. 아래 지시문은 캐릭터 팩 정체성 문장과 기준 그림(lab6_lineup.png)을 바탕으로 고친 판이에요. 평가와 결정은 `docs/CHARACTER_REVIEW.md`.', '',
+         '> 상태 (2026-11-26): **원형 지키기 판 표지 31/31 반영 완료** — 1920×1080, 480×270 픽셀 격자의 정확한 4배(검산: 4픽셀마다 같은 값)라 받은 파일을 그대로 썼어요. 처음 받은 원형 상실 판 26장은 `img/cover_offmodel/`에 보관. E27 표정은 시아만 반영, 모아는 다시 요청(아래 4장). 평가와 결정은 `docs/CHARACTER_REVIEW.md`.', '',
          '## 1. 공용 규칙', '',
          '- 그림체: **16비트 RPG 픽셀아트**(연구실 표지 지침), **흰 배경(#ffffff)**. 그림 안에 글자·숫자·기호를 넣지 않는다(글자는 HTML로).',
          '- 시리즈 표지 콘셉트: 「픽셀 열지도(이산) 위로 매끈한 바람길(연속)」 — `cover/cover_prompt.md` 참고. 원작 만화·애니 캐릭터는 쓰지 않고 연구실 식구만 그린다.',
@@ -69,23 +69,24 @@ def main():
          '- 생성 순서: ① 캐릭터 팩의 lab6_lineup.png와 표정 그림(E13)을 **반드시 함께 첨부** → ② cover_00을 먼저 받아 `docs/CHARACTER_REVIEW.md`의 원형 점검표로 확인 → ③ 통과한 그림을 참고 그림으로 더해 나머지 생성.',
          '- 반영: `img/cover/cover_NN.webp`를 넣고 `python3 tools/build.py`를 다시 돌리면 대체 표지가 그림으로 바뀌어요. og는 같은 그림을 1200×630으로 잘라 `img/og/og_NN.webp`로 덮어써요.', '',
          '## 2. 필요한 그림 전체', '', '| 키 | 페이지 | 상태 | 등장 |', '|---|---|---|---|']
-    L.append('| cover_00 | index.html | 다시 그리기 | 박사, 조수 하루, 시아, 모아 |')
+    L.append('| cover_00 | index.html | 반영 완료 | 박사, 조수 하루, 시아, 모아 |')
     for c in chs:
         who = ['doc', 'fly', 'robo', c['star'][0]]
-        L.append('| cover_%02d | %s.html | %s | %s |' % (c['no'], c['slug'], '새로 그리기' if c['no'] >= 25 else '다시 그리기', ', '.join(dict(doc='박사', fly='초파리 연구원', robo='주판봇', asst='조수 하루', sia='인턴 시아', moa='인턴 모아', x1='미공개 X1', x2='미공개 X2', x3='미공개 X3')[w] for w in who)))
-    L.append('| cover_practice | practice/index.html | 다시 그리기 | 박사, 시아, 모아, X3 |')
+        L.append('| cover_%02d | %s.html | %s | %s |' % (c['no'], c['slug'], '반영 완료', ', '.join(dict(doc='박사', fly='초파리 연구원', robo='주판봇', asst='조수 하루', sia='인턴 시아', moa='인턴 모아', x1='미공개 X1', x2='미공개 X2', x3='미공개 X3')[w] for w in who)))
+    L.append('| cover_practice | practice/index.html | 반영 완료 | 박사, 시아, 모아, X3 |')
     L += ['', '## 3. 표지 지시문', '', '### cover_00 — 오리엔테이션', '', '```', prompt(SCENE[0], ['doc', 'asst', 'sia', 'moa', 'fly', 'robo']), '```', '']
     for c in chs:
         L += ['### cover_%02d — %s' % (c['no'], c['title']), '', '비유: ' + ' / '.join(s['pair'][2] for s in c['stages']), '', '```', prompt(SCENE[c['no']], ['doc', 'fly', 'robo', c['star'][0]]), '```', '']
     L += ['### cover_practice — 실전 연습장', '', '```', prompt(SCENE['practice'], ['doc', 'sia', 'moa', 'x3']), '```', '']
-    L += ['## 4. 표정 추가 요청 — E27 머리 감싸 쥐기 (시아 · 모아)', '', '이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. 받기 전까지는 E21·E24 표정에 흔들림 효과를 씌워 대신해요.', '',
+    L += ['## 4. 표정 추가 요청 — E27 머리 감싸 쥐기 (시아 · 모아)', '', '이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. **시아는 반영 완료.** 모아는 받은 그림이 웃는 전신 그림(검은 배경, 손이 머리에 없음)이라 아래 고친 지시문으로 다시 요청해요. 받기 전까지 모아는 E21·E24 + 흔들림 효과.', '',
           '```', 'Use the attached character sheet as the ONLY design source and keep the character exactly on-model. Same 16-bit pixel-art style, same canvas size and framing as the attached expression faces, plain light grey background. '
           'New expression E27 "head_clutch": both hands pressed to the sides of the head, eyes squeezed into swirls, a small sweat drop, mouth in a wobbly line, as if a math formula is too hard. No letters, no symbols. Character: ' + NAME_EN['sia'], '```', '',
-          '```', 'Same request for: ' + NAME_EN['moa'], '```', '']
+          '```', 'Use the attached Moa character sheet and the attached Sia E27 image as references. Draw Moa in EXACTLY the same pose, crop and framing as the attached Sia E27 (upper body, from the waist up, facing the viewer), same 16-bit pixel-art style, plain light grey background (NOT black). '
+          'Expression E27 head_clutch: BOTH hands pressed against the sides of her head over the hair, eyes drawn as dizzy spirals, a small sweat drop, mouth a wavy worried line. She must NOT smile and must NOT be full body. Keep her design: ' + NAME_EN['moa'] + '. No letters, no symbols.', '```', '']
     open(os.path.join(ROOT, 'docs', 'IMG_specs.md'), 'w', encoding='utf-8').write('\n'.join(L))
-    items = [{'id': 'cover_00', 'role': 'cover', 'path': 'index.html#top', 'status': 'regenerate', 'file': 'img/cover/cover_00.webp', 'size': [1920, 1080], 'grid': [480, 270], 'offmodel': 'img/cover_offmodel/cover_00.webp', 'note': '원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성'}]
-    items += [{'id': 'cover_%02d' % c['no'], 'role': 'cover', 'path': c['slug'] + '.html#top', 'status': 'regenerate' if c['no'] < 25 else 'placeholder', 'characters': ['doc', 'fly', 'jupanbot', c['star'][0]], 'file': 'img/cover/cover_%02d.webp' % c['no'], 'size': [1920, 1080], 'grid': [480, 270], 'note': '원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성'} for c in chs]
-    items.append({'id': 'cover_practice', 'role': 'cover', 'path': 'practice/index.html#top', 'status': 'regenerate', 'file': 'img/cover/cover_practice.webp', 'size': [1920, 1080], 'grid': [480, 270], 'note': '원형 상실 판은 img/cover_offmodel/에 보관, 새 지시문으로 다시 생성'})
+    items = [{'id': 'cover_00', 'role': 'cover', 'path': 'index.html#top', 'status': 'ok', 'file': 'img/cover/cover_00.webp', 'size': [1920, 1080], 'grid': [480, 270], 'offmodel': 'img/cover_offmodel/cover_00.webp', 'note': '원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/'}]
+    items += [{'id': 'cover_%02d' % c['no'], 'role': 'cover', 'path': c['slug'] + '.html#top', 'status': 'ok', 'characters': ['doc', 'fly', 'jupanbot', c['star'][0]], 'file': 'img/cover/cover_%02d.webp' % c['no'], 'size': [1920, 1080], 'grid': [480, 270], 'note': '원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/'} for c in chs]
+    items.append({'id': 'cover_practice', 'role': 'cover', 'path': 'practice/index.html#top', 'status': 'ok', 'file': 'img/cover/cover_practice.webp', 'size': [1920, 1080], 'grid': [480, 270], 'note': '원형 지키기 판(480×270 격자 × 4, 받은 파일 그대로). 원형 상실 판은 img/cover_offmodel/'})
     man = {'series_ko': '이산위상 연구실 — 점 하나하나가 섬인 세상', 'title_ko': '이산위상 연구실', 'site_title': '이산위상 연구실 · 중학생도 따라오는 이산 위상 29장(활용 편 5장 포함) + 실전 연습장',
            'site_url': 'https://adminmrobo.github.io/discrete_topology_lab/', 'updated': '2026-11-26',
            'ontology': {'pages': [{'path': c['slug'] + '.html', 'kg': True, 'export': True} for c in chs]}, 'languages': ['ko'], 'items': items}
