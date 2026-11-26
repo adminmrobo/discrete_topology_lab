@@ -1,6 +1,6 @@
 # 이산위상 연구실 — 그림 제작 명세서
 
-> 상태 (2026-11-26): **원형 지키기 판 표지 31/31 반영 완료** — 1920×1080, 480×270 픽셀 격자의 정확한 4배(검산: 4픽셀마다 같은 값)라 받은 파일을 그대로 썼어요. 처음 받은 원형 상실 판 26장은 `img/cover_offmodel/`에 보관. E27 표정은 시아만 반영, 모아는 다시 요청(아래 4장). 평가와 결정은 `docs/CHARACTER_REVIEW.md`.
+> 상태 (2026-11-26): **원형 지키기 판 표지 31/31 반영 완료** — 1920×1080, 480×270 픽셀 격자의 정확한 4배(검산: 4픽셀마다 같은 값)라 받은 파일을 그대로 썼어요. 처음 받은 원형 상실 판 26장은 `img/cover_offmodel/`에 보관. E27 표정은 시아·모아 모두 반영 완료. 평가와 결정은 `docs/CHARACTER_REVIEW.md`.
 
 ## 1. 공용 규칙
 
@@ -295,7 +295,7 @@ Use the attached reference lineup (lab6_lineup.png) and expression faces as the 
 
 ## 4. 표정 추가 요청 — E27 머리 감싸 쥐기 (시아 · 모아)
 
-이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. **시아는 반영 완료.** 모아는 받은 그림이 웃는 전신 그림(검은 배경, 손이 머리에 없음)이라 아래 고친 지시문으로 다시 요청해요. 받기 전까지 모아는 E21·E24 + 흔들림 효과.
+이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. **시아·모아 모두 반영 완료.** 모아는 첫 그림이 웃는 전신 그림이라 아래 고친 지시문으로 다시 받았어요.
 
 ```
 Use the attached character sheet as the ONLY design source and keep the character exactly on-model. Same 16-bit pixel-art style, same canvas size and framing as the attached expression faces, plain light grey background. New expression E27 "head_clutch": both hands pressed to the sides of the head, eyes squeezed into swirls, a small sweat drop, mouth in a wobbly line, as if a math formula is too hard. No letters, no symbols. Character: intern Sia (chibi maid intern, long straight jet-black hair to the waist, side-swept bangs, gray eyes, NO headdress, charcoal-black long-sleeved maid dress with white lace cuffs, large soft gray bow at the collar, long white frilled apron)

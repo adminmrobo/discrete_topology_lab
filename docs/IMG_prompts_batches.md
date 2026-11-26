@@ -260,7 +260,7 @@ Use the attached reference lineup (lab6_lineup.png) and expression faces as the 
 
 ## 묶음 10 — 표정 추가 (E27)
 
-이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. **시아는 반영 완료.** 모아는 받은 그림이 웃는 전신 그림(검은 배경, 손이 머리에 없음)이라 아래 고친 지시문으로 다시 요청해요. 받기 전까지 모아는 E21·E24 + 흔들림 효과.
+이론 접기 상자와 4컷 첫 장면에 쓸 표정이에요. **시아·모아 모두 반영 완료.** 모아는 첫 그림이 웃는 전신 그림이라 아래 고친 지시문으로 다시 받았어요.
 
 ```
 Use the attached character sheet as the ONLY design source and keep the character exactly on-model. Same 16-bit pixel-art style, same canvas size and framing as the attached expression faces, plain light grey background. New expression E27 "head_clutch": both hands pressed to the sides of the head, eyes squeezed into swirls, a small sweat drop, mouth in a wobbly line, as if a math formula is too hard. No letters, no symbols. Character: intern Sia (chibi maid intern, long straight jet-black hair to the waist, side-swept bangs, gray eyes, NO headdress, charcoal-black long-sleeved maid dress with white lace cuffs, large soft gray bow at the collar, long white frilled apron)
